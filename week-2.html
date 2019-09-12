@@ -1,0 +1,391 @@
+
+<!-- Always remember to define your doctype! -->
+<!DOCTYPE html>
+<html>
+<!-- NOTE: when copy and pasting quoted items, you must delete and retype the quotes for the html to be parsed correctly.-->
+
+<head> <!-- Metadata goes in the HEAD section -->
+  <!-- NAVIGATION BAR -->
+  <nav id="nav-bar">
+    <h1>Hello World!</h1>
+
+      <ul>
+        <li><a href="#images">Images</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#lists">Lists</a></li>
+        <li><a href="#tff">Text Fields & Forms</a></li>
+        <li><a href="#bcb">Buttons & Checkboxes</a></li>
+        <li><a href="#animation">Shapes & Animation</a></li>
+      </ul>
+
+  </nav>
+</head>
+
+
+
+<body> <!-- Content of the web page goes in the BODY section -->
+  <p>
+    Greetings WebCo! Feel free to use this page and its corresponding code to get familiar with HTML and CSS.
+  </p>
+  <p>
+    If you have any questions, contact Minh Lam at <strong>mlam@oberlin.edu</strong>
+    and/or Kendra Lockard at <strong>klockard@oberlin.edu</strong>.
+  </p>
+  <p>
+    Happy coding!
+  </p>
+
+<hr>
+<!-- IMAGES -->
+<h4 id="images">Images</h4>
+  <p>
+    Let's start by inserting an image.
+  </p>
+
+  <div class="thin-green-border">
+    <img src="./tmg-article_tall.jpg" alt="turtle eating a strawberry">
+  </div>
+  <p>
+    We used the <strong>div</strong> element to create a border around the above turtle.
+    Notice that I overwrote the color and font of the <strong>p</strong> element
+    here with <em>inline styling</em>.
+  </p>
+
+
+<hr>
+<!-- LINKS -->
+<h4 id="links">Links</h4>
+  <p>
+    What about inserting links?
+    <!-- target="_blank" specifies that you want to open the link in a separate tag -->
+    <a href="https://mashable.com/article/turtles-eating-strawberries-videos/">
+      Click here to see more strawberry-eating turtles.</a>
+  </p>
+
+  <p>
+    We can link to external pages, or to other sections of our own web page.
+    When linking within your own page, just make sure your link and where you're linking to have the same <strong>id</strong> value.
+    This is how the navigation bar at the top of this web page works.
+  </p>
+  <a href="#internal-link-practice">
+    Click here for another example of jumping down.
+  </a>
+
+  <!-- IMAGES into LINKS -->
+  <p>
+    Sometimes it's nifty to turn images into links. Click on the image below for a surprise.
+  </p>
+  <div class="fun-border">
+    <a target="_blank" href="https://www.youtube.com/watch?reload=9&v=s6CArh5p-EU">
+      <img src="./f9vzm.jpg" alt="turtle wearing a raspberry jacket">
+    </a>
+  </div>
+
+
+<hr>
+<!-- LISTS -->
+<h4 id="lists">Lists</h4>
+  <p>Let's get some practice making lists.</p>
+  <!-- UNORDERED LISTS-->
+  <ul>
+    <li>lists</li>
+    <li>can</li>
+    <li>be</li>
+    <li>unordered</li>
+  </ul>
+
+  <p>or</p>
+
+  <!-- ORDERED LISTS -->
+  <ol>
+    <li>they</li>
+    <li>can</li>
+    <li>be</li>
+    <li>ordered!</li>
+  </ol>
+
+  <p>
+    Wow!
+  </p>
+  <p>
+    We've made some beautiful strides. Let's keep going.
+  </p>
+
+
+<hr>
+<!-- TEXT FIELDS, FORMS -->
+<h4 id="tff">Text Fields and Forms</h4>
+  <p>Sometimes we want the user's input. To do this, we will use
+    <input type="text" placeholder="text fields">.
+  </p>
+
+  <p>
+    But what good is the user's input if they can't submit it?
+    Luckily, we can build web forms that submit data to a server using HTML alone.
+    Just use the <strong>form</strong> element.
+  </p>
+    <label id="wrapper">
+      <div class="tf-border1">
+        <form action="#url-where-you-want-to-submit-form-data">
+          <input type="text" placeholder="This is placeholder text">
+        </form>
+      </div>
+  </label>
+
+  <!-- SUBMIT BUTTONS -->
+  <p>To make the UI a little friendlier, we can add a <strong>submit</strong>
+    button for this <strong>text field</strong>.
+    All we have to do is add a <strong>button</strong> as the last element of our
+    <strong>form</strong> element.</p>
+    <label id="wrapper">
+      <div class="tf-border2">
+        <form action="#url-where-you-want-to-submit-form-data">
+          <input type="text" placeholder="Hey buddy">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+  </label>
+
+  <!-- REQUIRED FIELDS -->
+  <p>Sometimes, we want to require that a user fill out a certain field.
+    We can enforce this by adding a <u>required</u> attribute to our <strong>input</strong> element.
+  </p>
+  <label id="wrapper">
+      <div class="tf-border3"
+        <form action="/url-where-you-want-to-submit-form-input">
+          <input type="text" placeholder="Try to submit without input"required>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+  </label>
+
+
+<hr>
+<!-- BUTTONS, CHECKBOXES -->
+<h4 id="bcb">Buttons and Checkboxes</h4>
+  <p> There are more features that may be useful in getting other types of user input.
+    For example, <strong>buttons</strong> are a common tool used for multiple choice
+    or checkbox type questions.
+    First we will look at <strong>radio buttons</strong>, which are HTML's multiple choice button type.
+  </p>
+
+  <!-- RADIO BUTTONS -->
+  <p>All related <strong>radio buttons</strong> should have the same <u>name</u> attribute,
+    to ensure that only one answer is chosen.
+    <br>
+    It is considered best practice to set a <u>for</u> attribute on label
+    elements with a value that matches that of the <strong>id</strong> value
+    of the <strong>input</strong> element.
+    This allows assisitive technologies to create a linked relationship between the label,
+    and the child input element.
+    <br>
+  </p>
+
+  <h3>
+    <label id="wrapper" for="on">
+      <input id="on" type="radio" name="on-off"> On
+    </label>
+    <label id="wrapper" for="off">
+      <input id="on" type="radio" name="on-off"> Off
+    </label>
+  </h3>
+
+  <!-- CHECKBOXES -->
+  <p>Checkboxes are another HTML tool available to use for questions with several possible answers.
+    Just like buttons, "checkbox" is a type of input.
+    In fact, they work just the same as radio buttons, with the same conventions and best practices.
+  </p>
+
+  <h3 id="wrapper">
+    I think html is:
+  </h3>
+  <h3>
+    <label id="wrapper" for="fun">
+      <input id="fun" type="checkbox" name="cb-practice">fun
+    </label>
+
+    <label id="wrapper" for="ok">
+      <input id="ok" type="checkbox" name="cb-practice">it's ok
+    </label>
+
+    <label id="wrapper" for="challenging">
+      <input id="challenging" type="checkbox" name="cb-practice">challenging
+    </label>
+
+    <label id="wrapper" for="meh">
+      <input id="meh" type="checkbox" name="cb-practice">meh
+    </label>
+
+    <label id="wrapper" for="intuitive">
+      <input id="intuitive" type="checkbox" name="cb-practice">intuitive
+    </label>
+
+    <label id="wrapper" for="cool">
+      <input id="cool" type="checkbox" name="cb-practice">the coolest
+    </label>
+  </h3>
+
+  <!-- CHECKED BY DEFAULT -->
+  <p>If you want certain radio buttons or checkboxes to be checked by default,
+    from the moment the user opens the webpage, simply add the <u>checked</u> attribute to their input element.
+  </p>
+
+  <h3>
+    <label id="wrapper" for="checked">
+      <input id="checked" type="checkbox" name="cb" checked>Checked by default
+    </label>
+    <label id="wrapper" for="unchecked">
+      <input id="unchecked" type="checkbox" name="cb">Unchecked by default
+    </label><br>
+  </h3>
+
+  <h3>
+    <label id="wrapper" for="checked">
+      <input id="checked" type="radio" name="cb" checked>Checked by default
+    </label>
+    <label id="wrapper" for="unchecked">
+      <input id="unchecked" type="radio" name="cb">Unchecked by default
+    </label>
+  </h3>
+
+
+<hr>
+<!-- SHAPES, ANIMATION -->
+<div id="back">
+  <h4 id="animation">Shapes & Animation
+    <p>
+      <em>Twinkle twinkle little star, how is your CSS parsed? </em>
+    <p>
+
+    <div class="star-1 stars"></div>
+    <div class="star-2 stars"></div>
+  </h4>
+
+  <p>
+    CSS offers some cool features to create basic graphics, shapes, and animation.
+    The tools covered in this section can be used to add a bit of interactivity to your site.
+  </p>
+
+  <!-- SHAPES -->
+  <p>
+    <strong>box-shadow</strong> is a property that applies a shadow to an element.
+    You can use it to make cool things like this box:
+      <div class="box"></div>
+  </p>
+
+  <br>
+  <p>
+    or this circle:
+      <div class="circle"></div>
+  </p>
+
+  <br>
+  <p>
+    or this parallelogram:
+      <div class="parallel"></div>
+  </p>
+
+  <br>
+  <p>
+    Woah! How did we make that parallelogram?
+    That's a great question, and brings us to our next important CSS property:
+    <strong><em>transform</em></strong>.
+  </p>
+
+  <!-- STATE CHANGES -->
+  <p>
+    <strong>transform</strong> is a property that changes an element's appearance during a certain state.
+    For example, we can use the <em>scale()</em> function with <strong>transform</strong>
+    to magnify elements when the user hovers over them:
+  </p>
+
+  <h5>
+    Try it!
+  </h5>
+
+  <p>
+    or we can skew elements when the user hovers over them, using <em>skewX()</em> or <em>skewY()</em>:
+  </p>
+
+  <h6>
+    Try it!
+  </h6>
+
+  <p>
+    We used <strong>transform</strong> to create our parallelogram earlier
+    by applying <em>skewX()</em> to what was once a square.
+  </p>
+
+  <br>
+  <!-- ANIMATION -->
+  <p>
+    Lastly, we will talk about how to animate elements.
+  </p>
+
+  <p>
+      <strong>@keyframes</strong> is a property that can be used
+      to control what happens during an animation. <em>animation-name</em> tells
+      CSS which rules go with which animations, and <em>animation-during</em>
+      specifies the length of time for an animation.
+  </p>
+
+  <p>
+    <strong>@keyframes</strong> can have any number of fields, from 0% to 100%,
+    specifying what happens along the timeline of the animation. The <strong>0%</strong>
+    field indicates the element display at the beginning of the animation, and the
+    <strong>100%</strong> field indicates the element display at the end of the animation.
+  </p>
+
+  <p>
+    The <em>animation-iteration</em> value defines how many times the animation repeats,
+    and can be set to any integer or to <u>infinite</u>. That's how the stars at the
+    top of this section were created. Here is another example:
+  </p>
+
+  <br>
+    <label id="wrapper">
+      <label id="rect">
+        I am rectangle, and I will change color ad infinitum
+      </label>
+    </label>
+
+  <p>
+    We can create movement by setting the <u>top</u>, <u>bottom</u>, <u>left</u>,
+    or <u>right</u> properties at intermediate percentage fields in @keyframes:
+  <p/>
+
+  <br>
+    <label id="wrapper">
+      <label id="rectmove">
+      </label>
+    </label>
+  </div>
+
+</div>
+
+
+
+
+
+<hr>
+<label id="wrapper">
+  <h2 id="internal-link-practice">
+    You jumped down! Way to go.
+  </h2>
+</label>
+
+<div class="purple-border">
+  <img src="./images.jpg" alt="celebratory turtle">
+</div>
+
+<br>
+  <p>
+    <a href="#links">
+      Click here to jump back up.
+    </a>
+  </p>
+
+<!--  <h2 id="url-where-you-want-to-submit-form-data"></h2>-->
+
+</body>
+</html>
