@@ -24,11 +24,6 @@
       color: #c0eec7;
     }
 
-    button {
-      background-color: #09A7A1;
-      font-family: monospace;
-    }
-
     /* Header styles */
     h1 {
 
@@ -65,7 +60,6 @@
       font-family: "Baloo Da", monospace;
       font-size: 20px;
       color: #f924f0;
-
     }
 
     /* Images */
@@ -90,27 +84,24 @@
       border-color: #2dad6b;
       border-width: 5px;
       border-style: dotted;
-      width: 400px;
+      width: fit-content;
       height: 230px;
-
     }
 
     .purple-border {
       border-color: #bc0bff;
       border-width: 10px;
       border-style: ridge;
-      width: 220px;
+      width: fit-content;
       height: 235px;
-
     }
 
     .fun-border {
       border-color: #ea17d6;
       border-width: 10px;
       border-style: outset;
-      width: 400px;
+      width: fit-content;
       height: 270px;
-
     }
 
     /* Text field borders */
@@ -118,21 +109,18 @@
       border-color: #fff85e;
       border-width: 3px;
       border-style: dashed;
-      width: 171px
     }
 
     .tf-border2 {
       border-color: #ffa500;
       border-width: 3px;
       border-style: dashed;
-      width: 131px
     }
 
     .tf-border3 {
       border-color: #ff0b11;
       border-width: 3px;
       border-style: dashed;
-      width: 246px
     }
 
 </style>
