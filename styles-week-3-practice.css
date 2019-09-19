@@ -1,0 +1,330 @@
+  <style>
+    head {
+      background: linear-gradient(35deg, #62e1d7, #e16295);
+      color: #ffffff;
+    }
+
+    body {
+      background: #f0f0f0;
+    }
+
+    /* Navigation bar */
+    nav {
+      background: linear-gradient(60deg, #62e1d7, #e16295);
+      text-align: center;
+      font-size: 18px;
+    }
+
+    nav ul {
+      padding: 0px 0px 0px 30px;
+      color: white;
+    }
+
+    nav li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    /* Preferred text elements */
+    p {
+      font-family: monospace;
+      font-size: 16px;
+      color: black;
+    }
+
+    /* Anchor elements */
+    a {
+      font-family: "Zilla Slab";
+      color: #c0eec7;
+      line-height: 30px;
+    }
+
+    a:hover {
+      color: #62d7e1;
+      font-size: 19px;
+    }
+
+    button {
+      background-color: #09A7A1;
+      font-family: monospace;
+    }
+
+    /* Button appearance during hover state */
+    button:hover {
+      animation-name: button-hov;
+      animation-duration: 300ms;
+      animation-fill-mode: forwards;
+    }
+
+    /* Allows button to change during hover state */
+    @keyframes button-hov {
+      100% {
+        background-color: #c8e4d6;
+      }
+    }
+
+    /* Header styles */
+    h1 {
+      text-align: center;
+      font-family: "Baloo Da", monospace;
+      color: white;
+      font-size: 60px;
+      margin: auto;
+      color: #ffffff;
+    }
+
+    h2 {
+      font-family: Lobster, monospace;
+      color: #e7adaf;
+    }
+
+    h3 {
+      font-family: "Sacramento", monospace;
+      font-size: 25px;
+      color: #fc4698;
+    }
+
+    h4 {
+      font-family: "Zilla Slab", monospace;
+      font-size: 30px;
+      color:  #363131;
+      text-align: center;
+      text-decoration: strong;
+    }
+
+    h5 {
+      font-family: "Baloo Da", monospace;
+      font-size: 20px;
+      color: #f924f0;
+      text-align: center;
+    }
+
+    h5:hover {
+      transform: scale(4);
+    }
+
+    h6 {
+      font-family: "Baloo Da", monospace;
+      font-size: 20px;
+      color: #f924f0;
+      text-align: center;
+    }
+
+    h6:hover {
+      transform: skewX(-45deg);
+    }
+
+    /* Images */
+    img {
+      width: 400px;
+    }
+
+    /* Unordered lists */
+    ul {
+      font-family: Lobster;
+      color: black;
+    }
+
+    /* Ordered lists */
+    ol {
+      font-family: "Indie Flower";
+      color: black;
+    }
+
+    /* Borders */
+    .thin-green-border {
+      border-color: #2dad6b;
+      border-width: 5px;
+      border-style: dotted;
+      width: 400px;
+      height: 230px;
+      margin: auto;
+    }
+
+    .purple-border {
+      border-color: #bc0bff;
+      border-width: 10px;
+      border-style: ridge;
+      width: 220px;
+      height: 235px;
+      margin: auto;
+    }
+
+    .fun-border {
+      border-color: #ea17d6;
+      border-width: 10px;
+      border-style: outset;
+      width: 400px;
+      height: 270px;
+      margin: auto;
+    }
+
+    /* Text field borders */
+    .tf-border1 {
+      border-color: #fff85e;
+      border-width: 3px;
+      border-style: dashed;
+      width: 171px
+    }
+
+    .tf-border2 {
+      border-color: #ffa500;
+      border-width: 3px;
+      border-style: dashed;
+      width: 131px
+    }
+
+    .tf-border3 {
+      border-color: #ff0b11;
+      border-width: 3px;
+      border-style: dashed;
+      width: 246px
+    }
+
+    /* Wrapper to center elements */
+    #wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Star background in animation section */
+    .stars {
+      background-color: white;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      animation-iteration-count: infinite;
+    }
+
+    .star-1 {
+      margin-left: 70%;
+      animation-name: twinkle-1;
+      animation-duration: 1.1s;
+    }
+
+    .star-2 {
+      margin-left: 25%;
+      animation-name: twinkle-2;
+      animation-duration: 0.9s;
+    }
+
+    @keyframes twinkle-1 {
+      20% {
+        transform: scale(0.5);
+        opacity: 0.5;
+      }
+    }
+
+    @keyframes twinkle-2 {
+      20% {
+        transform: scale(0.5);
+        opacity: 0.5;
+      }
+    }
+
+    #back {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      background: linear-gradient(black, #000099, #66c2ff, #ffcccc, #ffeee6);
+    }
+
+    /* Rainbow rectangle in animation section */
+    #rect {
+      animation-name: rainbow;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+      color: white;
+    }
+
+    @keyframes rainbow {
+      0% {
+        background-color: #ffacd9;
+      }
+      25% {
+        background-color: #cbaadb;
+      }
+      50% {
+        background-color: #b5d8f6;
+      }
+      75% {
+        background-color: #2b9da0;
+      }
+      100% {
+        background-color: #ffacd9;
+      }
+    }
+
+    /* Moving rectangle in animation section */
+    #rectmove {
+      animation-name: rect-move;
+      animation-duration: 6s;
+      animation-iteration-count: infinite;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background-color: #c7ea44;
+      color: white;
+      position: relative
+    }
+
+    @keyframes rect-move {
+      0% {
+        left: 500px;
+      }
+      50% {
+        left: -500px;
+      }
+      100% {
+        left: 500px;
+      }
+    }
+
+    /* Box graphic in animation section */
+    .box {
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 80px;
+
+      background-color: #df5ea6;
+      border-radius: 10%;
+      box-shadow: 25px 10px 10px 10px #b0df5e;
+    }
+
+    /* Circle graphic in animation section */
+    .circle {
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 70px;
+      height: 70px;
+
+      background-color: #e0e14e;
+      border-radius: 50%;
+      box-shadow: 15px 10px 10px 10px #4ecfe1;
+    }
+
+    /* Parallelogram graphic in animation section */
+    .parallel {
+      margin: auto;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100px;
+      height: 50px;
+      transform: skewX(-10deg);
+
+      background-color: #f9af24;
+      border-radius: 0px;
+      box-shadow: 15px 5px 5px 5px #f9245a;
+    }
+
+  </style>
