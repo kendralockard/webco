@@ -6,7 +6,7 @@
 
     /* Navigation bar */
     nav {
-      background: black;
+      background: linear-gradient(180deg, #62e1d7, #e16295);
       color: white;
       font-size: 18px;
     }
@@ -16,6 +16,23 @@
       font-family: monospace;
       font-size: 16px;
       color: black;
+      text-align: center;
+    }
+
+    a:hover {
+        color: #ffe06c;
+        font-size: 1.2rem;
+    }
+
+    nav ul {
+
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    nav li {
+       display: inline;
+       margin: 20px;
     }
 
     /* Anchor elements */
@@ -24,12 +41,18 @@
       color: #c0eec7;
     }
 
+    .navbar-1 {
+        display: flex;
+    }
+
     /* Header styles */
     h1 {
-
+        display: inline;
+        text-align: left;
       font-family: "Baloo Da", monospace;
-      font-size: 60px;
-      color: #ffffff;
+        font-size: 60px;
+        color: #ffffff;
+        margin: auto;
     }
 
     h2 {
@@ -47,6 +70,7 @@
       font-family: "Zilla Slab", monospace;
       font-size: 30px;
       color:  #363131;
+      text-align: center;
     }
 
     h5 {
@@ -71,6 +95,10 @@
     ul {
       font-family: Lobster;
       color: black;
+    }
+
+    .green-background {
+        background: green;
     }
 
     /* Ordered lists */
@@ -109,18 +137,33 @@
       border-color: #fff85e;
       border-width: 3px;
       border-style: dashed;
+      width: fit-content;
+      margin: auto;
     }
 
     .tf-border2 {
       border-color: #ffa500;
       border-width: 3px;
       border-style: dashed;
+            width: fit-content;
+        margin: auto;
     }
 
     .tf-border3 {
       border-color: #ff0b11;
       border-width: 3px;
       border-style: dashed;
+            width: fit-content;
+    margin: auto;
+    }
+
+    button {
+        font-family: monospace;
+    }
+
+    button:hover {
+        background: #7864ed;
+        transition-delay: 5s;
     }
 
 </style>
