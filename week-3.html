@@ -11,9 +11,9 @@
 <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet" type="text/css">
 
-
 <head> <!-- Metadata goes in the HEAD section -->
   <link rel="stylesheet" href="styles-week-3-practice.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <!-- NAVIGATION BAR -->
   <nav id="nav-bar">
     <h1>Hello World!</h1>
@@ -30,7 +30,15 @@
   </nav>
 </head>
 
-
+<script>
+    $(document).ready(() => {
+      /* ** Enter your code below this line ** */
+      $('#input1').keyup(function() {
+      console.log($(this).val())
+      })
+      $('#libs').css('color', 'yellow')
+    })
+  </script>
 
 <body> <!-- Content of the web page goes in the BODY section -->
   <p style="text-align: center; font-size: 12px;">
@@ -125,7 +133,7 @@
 <!-- TEXT FIELDS, FORMS -->
 <h4 id="tff">Text Fields and Forms</h4>
   <p>Sometimes we want the user's input. To do this, we will use
-    <input type="text" placeholder="text fields" style="font-family: monospace; width: 100px;">.
+    <input id="input1" type="text" placeholder="text fields" style="font-family: monospace; width: 100px;">.
   </p>
 
   <p>
@@ -168,6 +176,15 @@
       </div>
   </label>
 
+<hr>
+<!-- MAD LIBS TIME-->
+<h4> Mad <span id="libs">Libs</span> Time </h4>
+  <p>
+      Once upon a time there was a girl named Trang. She loved cats. She never had a cat before but one day she got a cat for her Yom Kippur. The cat's name was Mikaela. Trang loved Mikaela. She kicked with it and loved it sooo much. Her dad, named Jen, disliked the cat but her mom loved it. Trang pet it and loved it so much.
+  </p>
+  <p>
+      They all lived lol ever after. 
+  </p>
 
 <hr>
 <!-- BUTTONS, CHECKBOXES -->
