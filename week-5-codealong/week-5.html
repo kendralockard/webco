@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Baloo+Da"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="styles-week-5.css" />
+  </head>
+  <script>
+    // Defining prices for different items
+    var priceList = {
+      piano: 700,
+      book: 2000,
+      bottle: 1,
+      'propaganda-poster': 10
+    };
+
+    // TODO: Write a function getNewTotal that takes 2 arguments: currentTotal and itemName and returns the new total cost
+    /* Change code below this line */
+
+    /* Change code above this line */
+
+    function addItem() {
+      /* Grab element from html */
+      var itemName = document.getElementById('item-input').value;
+      itemName.trim();
+      itemName.replace(' ', '-');
+      if (!priceList.hasOwnProperty(itemName)) {
+        return;
+      }
+      var total = document.getElementById('total');
+      total.innerText = getNewTotal(parseFloat(total.innerText || 0), itemName);
+    }
+  </script>
+  <body>
+    <h1>Minh's shop</h1>
+    <div id="item-list">
+      For sale:
+      <ul>
+        <li>piano $700</li>
+        <li>book $2000</li>
+        <li>bottle $1</li>
+        <li>propaganda poster $10</li>
+      </ul>
+    </div>
+    <h4>Shopping cart total is: <span id="total"></span></h4>
+    <form>
+      <label id="wrapper"
+        >Add item to cart:
+        <input type="text" id="item-input" />
+      </label>
+      <button type="button" id="submit" onclick="addItem()">Submit</button>
+    </form>
+  </body>
+</html>
