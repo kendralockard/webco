@@ -22,8 +22,25 @@ function addItem() {
   if (!priceList.hasOwnProperty(itemName)) {
     return;
   }
-  var shoppingList = document.getElementById('shopping-list');
-  shoppingList.innerHTML += '<div>' + '<img class="remove-button" src="./remove-item.png" id="remove-' + itemName + '"> ' + (itemName.replace('-', ' ')) + '</div>'
   var total = document.getElementById('total');
   total.innerText = getNewTotal(parseFloat(total.innerText || 0), itemName);
+
+  var shoppingList = document.getElementById('shopping-list');
+  shoppingList.innerHTML += '<div id="' + itemName + '">'
+                          + '<img class="remove-button" src="./remove-item.png" id="remove-' + itemName
+                          + '" onclick="removeItem(' + itemName.toString() + ", " + parseFloat(total.innerText || 0) + ", " + itemName.toString() + ')"> '
+                          + (itemName.replace('-', ' '))
+                          + '</div>'
+
+}
+
+function removeItem(itemName, currentTotal, removedItem) {
+  var item = document.getElementById(itemName.id);
+  if (item.style.display === "none") {
+    item.style.display = "block";
+  } else {
+    item.style.display = "none";
+  }
+
+  getNewTotal(currentTotal, removedItem);
 }
