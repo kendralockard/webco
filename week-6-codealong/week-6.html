@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Baloo+Da"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="styles-week-6.css" />
+  </head>
+  <script src="week-6.js"></script>
+  <body>
+
+  <div class="header">
+    <h1>Minh's shoppe</h1>
+  </div>
+
+  <br>
+
+  <div class="parent">
+
+    <div id="item-list" class="header item-list">
+      For sale:
+      <ul>
+        <li>piano $700</li>
+        <li>book $2000</li>
+        <li>bottle $1</li>
+        <li>propaganda poster $10</li>
+      </ul>
+    </div>
+
+    <div class="shopping-list">
+      <h4>Shopping cart total is: <span id="total"></span></h4>
+        <form>
+          <label id="wrapper">
+            Add item to cart:
+            <input type="text" id="item-input" />
+          </label>
+          <button type="button" id="submit" onclick="addItem()">Submit</button>
+        </form>
+
+      <div id="shopping-list">
+        <h4>Shopping Cart</h4>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

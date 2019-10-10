@@ -1,0 +1,16 @@
+<!DOCTYPE hmtl>
+<html>
+    <script>
+        function timeWarp(numSeconds) {
+            var array = [];
+            var remainder = numSeconds % 3600;
+            var numHours = (numSeconds - remainder) / 3600;
+            array.push(numHours);
+            var numSeconds = remainder % 60;
+            var numMinutes = (remainder - numSeconds) / 60;
+            array.push(numMinutes);
+            array.push(numSeconds);
+            return array
+        }
+    </script>
+</html>
