@@ -53,4 +53,13 @@ function removeItem(itemName, currentTotal) {
   total.innerText = getReducedTotal(parseFloat(total.innerText || 0), itemName.id);
 }
 
+// We need to implement a function getReducedTotal 
+// that takes in 2 arguments: 1. currentTotal 
+// and 2. name of the item. Then, the function 
+// will return the new correct total
 
+function getReducedTotal(currentTotal, itemName) {
+  var price = priceList[itemName]; 
+  // Can't write priceList.itemName
+  return currentTotal - price;
+}
