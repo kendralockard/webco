@@ -5,18 +5,12 @@ import Title from './components/title';
 // import ItemList from './components/itemList';
 
 class App extends React.Component {
-  state = {
-    item: 'Piano'
-  };
+  // Class component needs a render method
   render() {
     return (
-      <div className="App">
-        <Title />
-        <ul>
-          <li className="item">Piano</li>
-        </ul>
-      </div>
-    );
+      <Title />
+      <Subtitle />
+    )
   }
 }
 
