@@ -21,6 +21,11 @@ body {
   background: linear-gradient(60deg, #62e1d7, #e16295);
 }
 
+ul {
+  list-style-type: none;
+  display: inline;
+}
+
 .remove-button {
   width: 15px;
   height: 15px;
@@ -40,14 +45,6 @@ body {
   width: fit-content;
 }
 
-.header.item-list {
-  border-style: solid;
-  border-width: 0.1rem;
-  background-color: #f7e9f1;
-  display: block;
-  height: 160px;
-}
-
 .shopping-list {
   display: block;
 }
@@ -62,4 +59,6 @@ body {
   background-color: #f7e9f1;
   display: block;
   height: fit-content;
+  margin: 10px;
+  text-align: center;
 }

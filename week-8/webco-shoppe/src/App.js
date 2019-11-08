@@ -4,7 +4,14 @@ import ItemList from './ItemList';
 
 // App is a component
 class App extends React.Component {
-  state = { items: ['piano', 'book', 'propaganda poster', 'piano'] };
+  state = {
+    items: [
+      { name: 'piano', price: 700 },
+      { name: 'book', price: 2000 },
+      { name: 'propaganda poster', price: 10 },
+      { name: 'bottle', price: 1 }
+    ]
+  };
 
   render() {
     return (

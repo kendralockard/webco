@@ -1,12 +1,9 @@
 import React from 'react';
+import Item from './Item';
 
 class ItemList extends React.Component {
   render() {
-    const items = this.props.items.map(str => (
-      <div className="header item">
-        <li>{str}</li>
-      </div>
-    ));
+    const items = this.props.items.map(item => <Item item={item} />);
     return <ul>{items}</ul>;
   }
 }
