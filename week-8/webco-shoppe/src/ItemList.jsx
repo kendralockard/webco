@@ -1,15 +1,16 @@
 import React from 'react';
+import Item from './Item';
 
-class ItemList extends React.Component {
-  render() {
-    return (
-      <ul>
-        <li>
-          {this.props.item.name} {this.props.item.price}
-        </li>
-      </ul>
-    );
-  }
-}
+// React-specific props argument
+const ItemList = props => {
+  return (
+    <ul>
+      {/* <Item item={props.item} /> */}
+      {props.items.map(item => (
+        <Item updateBasket={props.updateBasket} item={item} />
+      ))}
+    </ul>
+  );
+};
 
 export default ItemList;
