@@ -1,11 +1,13 @@
 import React from 'react';
 
 const Item = props => {
+  const onClick = () => props.updateBasket(props.item.price);
   return (
-    <li>
+    <li className="header item">
       {props.item.name}
-      {props.item.price}
-      <button onClick={props.updateBasket}>Add To Cart</button>
+      <br />${props.item.price}
+      <br />
+      <button onClick={onClick}>Add To Cart</button>
     </li>
   );
 };
